@@ -49,4 +49,13 @@ h1 {
     height: calc(600px / 5);
     width: 300px;
     object-fit: cover;
+    filter: grayscale(80%);
+}
+
+#thumbnail img:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+#thumbnail img:last-child {
+    border-radius: 0 0 10px 10px;
 }

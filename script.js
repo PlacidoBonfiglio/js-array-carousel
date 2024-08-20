@@ -22,11 +22,12 @@ const carouselGallery = document.querySelector('.gallery');
 let imgs = '';
 
 for (let i = 0; i < sources.length; i++) {
-    imgs += `<img alt="immagine-${i + 1}" src="${sources[i]}">`;
+    imgs += `<img src="${sources[i]}" alt="immagine-${i + 1}">`;
 }
 
 carouselGallery.innerHTML = imgs;
 
+// Creo questa variabile in questa posizione altrimenti JS non troverebbe le immagini nell HTML
 const images = document.querySelectorAll('#carousel img');
 
 // Aggiungo la classe active alla prima immagine
