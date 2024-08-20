@@ -1,11 +1,10 @@
 h1 {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
 }
 
 #carousel {
     height: 600px;
     width: 1000px;
-    margin: 0 auto;
     position: relative;
 }
 
@@ -26,24 +25,29 @@ h1 {
     display: block;
 }
 
-#thumbnail-box {
-    height: 600px;
-    width: 300px;
-    border-radius: 0 10px 10px 0;
-    background-color: rgb(88, 88, 88);
-}
-
-#thumbnail-box i {
-    position: relative;
+#carousel i {
     font-size: 2rem;
-    left: 45%;
+    position: absolute;
+    right: -18%;
     cursor: pointer;
 }
 
 #next {
-    bottom: -93%;
+    bottom: -10%;
 }
 
 #prev {
     top: -10%;
+}
+
+#thumbnail {
+    height: 600px;
+    width: 300px;
+    border-radius: 0 10px 10px 0;
+}
+
+#thumbnail img {
+    height: calc(600px / 5);
+    width: 300px;
+    object-fit: cover;
 }
