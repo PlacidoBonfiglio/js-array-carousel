@@ -17,8 +17,9 @@ const sources = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'im
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
 const carouselGallery = document.querySelector('.gallery');
+const thumbnailGallery = document.getElementById('thumbnail');
 
-// Creo l'elemento immagine e lo stampo in pagina
+// Creo l'elemento immagine e lo stampo in pagina (sia carosello che thumbnails)
 let imgs = '';
 
 for (let i = 0; i < sources.length; i++) {
@@ -26,9 +27,11 @@ for (let i = 0; i < sources.length; i++) {
 }
 
 carouselGallery.innerHTML = imgs;
+thumbnailGallery.innerHTML = imgs;
 
 // Creo questa variabile in questa posizione altrimenti JS non troverebbe le immagini nell HTML
 const images = document.querySelectorAll('#carousel img');
+const thumbs = document.querySelectorAll('#thumbnail img');
 
 // Aggiungo la classe active alla prima immagine
 let currentActiveIndex = 0
@@ -38,6 +41,7 @@ images[currentActiveIndex].classList.add('active');
 nextButton.addEventListener('click', function() {
     // Rimozione della classe active dall'immagine corrente
     images[currentActiveIndex].classList.remove('active');
+    thumbs[currentActiveIndex].classList.remove('active');
 
     // Incremento l'indice quindi passo all'immagine successiva
     currentActiveIndex++;
@@ -49,12 +53,14 @@ nextButton.addEventListener('click', function() {
 
     // Aggiungo la classe active all'immagine successiva
     images[currentActiveIndex].classList.add('active');
+    thumbs[currentActiveIndex].classList.add('active');
 })
 
 // Aggiungere funziona al pulsante PREV
 prevButton.addEventListener('click', function() {
     // Rimozione della classe active dall'immagine corrente
     images[currentActiveIndex].classList.remove('active');
+    thumbs[currentActiveIndex].classList.remove('active');
 
     // Decremento l'indice quindi passo all'immagine precedente
     currentActiveIndex--;
@@ -66,5 +72,6 @@ prevButton.addEventListener('click', function() {
 
     // Aggiungo la classe active all'immagine successiva
     images[currentActiveIndex].classList.add('active');
+    thumbs[currentActiveIndex].classList.add('active');
 })
 

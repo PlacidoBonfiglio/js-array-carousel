@@ -36,9 +36,26 @@ h1 {
     bottom: -10%;
 }
 
+#next:hover {
+    scale: 1.1
+}
+
+#next:active {
+    scale: 1
+}
+
 #prev {
     top: -10%;
 }
+
+#prev:hover {
+    scale: 1.1
+}
+
+#prev:active {
+    scale: 1
+}
+
 
 #thumbnail {
     height: 600px;
@@ -50,6 +67,7 @@ h1 {
     width: 300px;
     object-fit: cover;
     filter: grayscale(80%);
+    cursor: pointer;
 }
 
 #thumbnail img:first-child {
@@ -58,4 +76,9 @@ h1 {
 
 #thumbnail img:last-child {
     border-radius: 0 0 10px 10px;
+}
+
+#thumbnail img.active {
+    filter: grayscale(0);
+    border: 5px solid black;
 }
