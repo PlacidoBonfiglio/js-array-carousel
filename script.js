@@ -15,3 +15,27 @@ let currentActiveIndex = 0
 images[currentActiveIndex].classList.add('active');
 
 // Aggiungere funziona al pulsante next
+nextButton.addEventListener('click', function() {
+    // Rimozione della classe active dall'immagine corrente
+    images[currentActiveIndex].classList.remove('active');
+
+    // Incremento l'indice quindi passo all'immagine successiva
+    currentActiveIndex++;
+
+    // Aggiungo la classe active all'immagine successiva
+    images[currentActiveIndex].classList.add('active');
+})
+
+
+// Aggiungere funziona al pulsante prev
+prevButton.addEventListener('click', function() {
+    // Rimozione della classe active dall'immagine corrente
+    images[currentActiveIndex].classList.remove('active');
+
+    // Decremento l'indice quindi passo all'immagine precedente
+    currentActiveIndex--;
+
+    // Aggiungo la classe active all'immagine successiva
+    images[currentActiveIndex].classList.add('active');
+})
+
