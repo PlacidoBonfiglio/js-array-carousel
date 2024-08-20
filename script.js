@@ -75,3 +75,21 @@ prevButton.addEventListener('click', function() {
     thumbs[currentActiveIndex].classList.add('active');
 })
 
+// Reazione al click della thumbnail
+for (let i = 0; i < thumbs.length; i++) {
+    
+    thumbs[i].addEventListener('click', function() {
+        
+        // Rimozione classe active dalle immagini della thumb
+        images[currentActiveIndex].classList.remove('active');
+        thumbs[currentActiveIndex].classList.remove('active');
+
+        // Setto l'indice allo stesso valore dell'immagine della thumb
+        currentActiveIndex = i;
+
+        // Inserire classe active dalle immagini della thumb
+        images[currentActiveIndex].classList.add('active');
+        thumbs[currentActiveIndex].classList.add('active');
+    })
+}
+

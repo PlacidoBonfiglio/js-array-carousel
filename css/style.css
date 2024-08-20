@@ -70,6 +70,10 @@ h1 {
     cursor: pointer;
 }
 
+#thumbnail img:hover {
+    filter: contrast(110%);
+}
+
 #thumbnail img:first-child {
     border-radius: 10px 10px 0 0;
 }
