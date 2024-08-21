@@ -33,7 +33,7 @@ thumbnailGallery.innerHTML = imgs;
 const images = document.querySelectorAll('#carousel img');
 const thumbs = document.querySelectorAll('#thumbnail img');
 
-// Aggiungo la classe active alla prima immagine
+// Aggiungo la classe active alla prima immagine (thumb e gallery)
 let currentActiveIndex = 0
 images[currentActiveIndex].classList.add('active');
 thumbs[currentActiveIndex].classList.add('active');
@@ -47,7 +47,7 @@ nextButton.addEventListener('click', function() {
     // Incremento l'indice quindi passo all'immagine successiva
     currentActiveIndex++;
 
-    // Controllo se vado fuori dall arrayù
+    // Controllo se vado fuori dall array
     if (currentActiveIndex === images.length) {
         currentActiveIndex = 0;
     }
