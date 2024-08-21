@@ -36,6 +36,7 @@ const thumbs = document.querySelectorAll('#thumbnail img');
 // Aggiungo la classe active alla prima immagine
 let currentActiveIndex = 0
 images[currentActiveIndex].classList.add('active');
+thumbs[currentActiveIndex].classList.add('active');
 
 // Aggiungere funziona al pulsante NEXT
 nextButton.addEventListener('click', function() {
